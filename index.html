@@ -6,12 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #bg {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./002.jpg);
+            position: relative;
+        }
+
+        #cat {
+            width: 300px;
+            height: 300px;
+            background-image: url(./001.png);
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            animation-name: flycat;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        .bg-style {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        @keyframes flycat {
+            0% {
+                bottom: 0px;
+            }
+
+            50% {
+                bottom: 100%;
+            }
+            100% {
+                bottom: 0px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo id officia vel fugiat illo maiores
-        voluptatibus a. Recusandae nesciunt error neque ut, dicta molestias illo dolor repellendus laborum impedit
-        quidem?</p>
+    <div id="bg" class="bg-style bpo">
+        <div id="cat" class="bg-style"></div>
+    </div>
 </body>
 
 </html>

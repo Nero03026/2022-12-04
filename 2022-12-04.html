@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #box1{
-            width: 100px;
-            height: 100px;
-            background-color: black;
-            float: left;
+        /* CSS選擇器 */
+        /* 基礎用法 */
+        /* ID(#) */
+        /* CLASS(.) */
+        /* 米字號(*) */
+        /* 標籤(div、p、iframe) */
+
+        /* 進階用法 */
+        /* 階層選擇器 */
+        /* 空格( ) */
+        #box1 p {
+            color: aquamarine;
         }
-        #box2{
-            width: 200px;
-            height: 200px;
-            background-color: palevioletred;
-            float: right;
+        /* 大於(>) */
+        #box1>p {
+            color: peru;
         }
-        #box3{
-            width: 100px;
-            height: 100px;
-            background-color: purple;
-            clear: left;
+
+        /* 相鄰選擇器 */
+        /* 加號(+) */
+        #box1+p {
+            color: palevioletred;
         }
+        /* 波浪(~) */
+        #box1~p {
+            color: powderblue;
+        }
+
+        /* :nth-child() */
+        /* #box1 p:nth-child(3){font-size: 38px;} */
+        #box1 p:nth-child(2n){font-size: 38px;}
     </style>
 </head>
+
 <body>
-    <div id="box1">123123</div>
-    <div id="box2">123123</div>
-    <div id="box3">123123</div>
-    元素【標籤 + 屬性 + 內容】
+    <div id="box1">
+        <p>這個是在DIV裡面的</p>
+        <p>這個是在DIV裡面的</p>
+        <p>這個是在DIV裡面的</p>
+    </div>
+    <p>這個是在DIV外面的</p>
+    <div>這個是在DIV外面的</div>
+    <p>這個是在DIV外面的</p>
 </body>
+
 </html>
